@@ -1,0 +1,25 @@
+type Query {
+    _dummy: String
+}
+
+type Mutation {
+    putData(input: DataInput!): Boolean
+    saveCase(input: CaseInput!): Boolean
+}
+
+input DataInput {
+    key: String!
+    value: String!
+}
+
+input CaseInput {
+    key: String
+    caseId: String!
+    title: String!
+    description: String
+    status: String
+    priority: String
+    assignedTo: String
+    createdDate: String
+    updatedDate: String
+}
